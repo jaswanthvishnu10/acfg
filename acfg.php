@@ -3,6 +3,7 @@ session_start();
 $user = $_SESSION[user];
 $course_id = $_SESSION[course_id];
 include('db.php');
+
 try{
 $sql="SELECT b.name FROM FACULTY as b WHERE b.faculty_id='$user'";
 $result = mysqli_query($conn,$sql);

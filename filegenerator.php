@@ -367,9 +367,9 @@ array_push($file_pages, 2);
 array_push($file_pages, 2);
 array_push($file_pages, 4);
 $fileArray= $stack;
-print_r($fileArray);
+/*print_r($fileArray);
 print_r($file_names);
-print_r($file_pages);
+print_r($file_pages);*/
 
 
 $pdf= new FPDF(); 
@@ -430,7 +430,7 @@ array_push($fileArray, "uploads/$course_id/$course_path/copo.pdf");
 $datadir = "uploads/$course_id/$course_path/";
 
 $outputName = $datadir."ACFG.pdf";
-
+unlink($outputName);
 try{
 
 
@@ -458,7 +458,7 @@ if($pdf->numPages>1) {
         $pdf->AddPage();
     }
 }
-$pdf->Output("uploads/$course_id/$course_path/ACFG.pdf",'F');
+$pdf->Output("uploads/$course_id/$course_path/ACFG.pdf",'D');
 
 
 					function count_pages($f){
