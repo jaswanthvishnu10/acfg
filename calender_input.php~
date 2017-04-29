@@ -1,0 +1,26 @@
+<?php
+session_start();
+include('db.php');
+if(isset($_POST[add_event]))
+{
+
+	$sql="INSERT INTO CALENDAR (event,start_date,end_date) VALUES ('$_POST[event]','$_POST[start_date]','$_POST[end_date]','admin')";
+
+	if(mysqli_query($conn,$sql))
+	{
+		echo "<br>Event added Successfully<br>";
+	}
+	else
+	{
+		echo "<br>Event failed to be added<br>" . mysqli_error();
+	}
+}
+?>
+
+
+<form method="post">
+<label>Event</label><input type="text" name="event" >
+<label>From Date</label><input type="date" name="start_date" >
+<label>To Date</label><input type="date" name="end_date">
+<input type='submit' name='add_event' value="Add Event">
+</form>

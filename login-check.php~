@@ -1,0 +1,23 @@
+<?php
+include ("db.php");
+$user=$_POST['user']; 
+$pass=$_POST['pass'];
+
+$sql="SELECT * FROM FACULTY WHERE faculty_id='$user' and password='$pass'";
+$result=mysqli_query($conn,$sql);
+
+$count=mysqli_num_rows($result);
+
+if ($count==1) {
+    echo "Success! $count";
+    //header("Location: upload_page.html");
+    die();
+} else {
+    //echo "Unsuccessful! $count"; 
+    echo("<script type='text/javascript'> alert('Invalid Username/Password'); </script>");
+}
+
+ob_end_flush();
+?>
+
+

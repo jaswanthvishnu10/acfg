@@ -1,0 +1,149 @@
+
+.container-fluid {
+    padding-left: 0px;
+}
+ul {
+  list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+table{
+border-collapse: separate;
+border: 1px solid #babeb8;
+border-radius : 3px ;
+width : 100%;
+
+}
+tbody > tr > td{
+cursor:pointer;
+//border-bottom:1px solid black; 
+font-size: 20px;
+padding : 15px 10px 0px 10px;
+}
+
+
+
+tr:nth-child(odd):hover td {
+  background:rgba(0, 0, 0, 0.1);
+  color : black ;
+  
+}
+
+tr:nth-child(even):hover td {
+  background:rgba(0, 0, 0, 0.1);
+  color : black ;
+  
+}
+
+.form-style-10 h1{
+    margin: -10px 0px 30px 0px;
+}
+
+#right-bar{
+padding : 10px;
+margin : auto;
+
+
+}
+
+#courses-list-button{
+
+}
+#references-list-button{
+
+}
+
+.btn
+{
+padding: 8px 10px 8px 10px;
+border: solid white 2px;
+}
+.col-sm-1 > .btn{
+
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+ //   background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #2A6881;
+    color: white;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 0px solid transparent;
+}
+a {
+    text-decoration: none !important;
+}
+
+.anotherClass{
+    background-color: #2A6881;
+}
+
+
+.anotherClass1{
+    background-color: #f1f1f1;
+}
+
+.highlightClass{
+    background-color: #f1f1f1;
+}
+
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #2098D1;
+  color: white;
+}
+
+
+input[type=checkbox] {
+
+ -ms-transform: scale(1.7); /* IE */
+ -moz-transform: scale(1.7); /* FF */
+ -webkit-transform: scale(1.7); /* Safari and Chrome */
+ -o-transform: scale(1.7); /* Opera */
+  padding: 10px;
+  cursor: pointer;
+}
+
+.acfg_table{
+font-size:10px;
+}

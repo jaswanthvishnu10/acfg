@@ -1,0 +1,53 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="container-fluid">
+<nav class = " row navbar navbar-default" role = "navigation" style="background:#800080;">
+   
+   <div class = "navbar-header col-sm-4">
+      <a class = "navbar-brand" href = "#" style="color:white;">Automatic Course File Generator</a>
+   </div>
+   
+   <div>
+      <ul class = "nav navbar-nav navbar-right col-md-8">
+	<form action="" method="post">
+	 <div class="col-sm-4"></div>
+         <input class="col-sm-3" style="margin:10px 5px;" type="text" placeholder="Username" name="user" width="100px">
+         <input class="col-sm-3" style="margin:10px 5px;" type="password" placeholder="Password" name="pass" width="100px">
+	 <input class="col-sm-1" style="margin:10px 5px;" type="submit" value="Login">
+	</form>  		
+      </ul>
+   </div>
+   
+</nav>
+<div class="row">
+	<div class="col-sm-6"></div>
+	<div class="col-sm-6">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-5" style="background:rgba(38,34,33,0.3);">
+		<form id="reg_form" style="text-align:center;">
+			<h3 style="color:white">Register here!</h3><br>
+			<input type="text" name="name" placeholder="Name"	><br>
+			<input type="text" name="reg_user" placeholder="Username"><br>
+			<input type="password" name="reg_pass" placeholder="Password"><br>
+			<input type="password" name="check_pass" placeholder="Re-enter Password"><br>
+			<select name="Department">
+			<option value="cse">Computer Science & Engineering</option>
+			<option value="mech">Mechanical Engineering</option>
+			</select><br>
+			<input type="date" name="dob" placeholder="Date of Birth(mm/dd/yyyy)"><br>
+			<input type="tel" name="phone" placeholder="Phone Number"><br>
+			<input type="email" name="email" placeholder="E-mail"><br>
+			<input type="submit" value="Register">
+		</form>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
