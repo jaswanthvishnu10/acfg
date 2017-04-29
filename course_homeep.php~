@@ -67,7 +67,7 @@ document.getElementById("course").className+= " anotherClass";
 			</table>			
 		</div>		<!--Left Side bar sm-3 -->
 <script>
-document.getElementById("eval-list-button").className+= " highlightClass";
+document.getElementById("eval-list-button").className+= " anotherClass1";
 </script>
 
 		<div class="col-sm-9"  id="right-bar">

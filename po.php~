@@ -69,11 +69,14 @@ document.getElementById("course").className+= " anotherClass";
 			    <tr>
 			        <td id="po" ><a href="po.php">PO - Calculation</a></td>
 			    </tr>
+				 <tr>
+			        <td id="prev-acfg" ><a href="prev_acfg.php">Previous Course files</a></td>
+			    </tr>
 			  	</tbody>
 			</table>			
 		</div>		<!--Left Side bar sm-3 -->
 <script>
-document.getElementById("po").className+= " highlightClass";
+document.getElementById("po").className+= " anotherClass1";
 </script>
 
 		<div class="col-sm-9"  id="right-bar">
@@ -116,6 +119,8 @@ if($row = mysqli_fetch_assoc($result))
 		}
 	echo "</tr></table></div>";
 	echo "<br><br><center><strong>PO Attained = $row[avg_po]</strong></center>";
+	$fin = $fin/3*100;
+	echo "<br><center><strong>Percentage/Weighted PO Attained = $fin</strong></center>";
 	}
 
 
@@ -160,6 +165,8 @@ echo "	<script>
 $sql="update COURSE_PO set avg_po=$fin ,flag=1 where course_id='$course_id'";
 		mysqli_query($conn,$sql);
 	echo "<br><br><center><strong>PO Attained = $fin</strong></center>";
+	$fin = $fin/3*100;
+	echo "<br><center><strong>Percentage/Weighted PO Attained = $fin</strong></center>";
 }
 
 ?>

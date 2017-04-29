@@ -63,6 +63,9 @@ document.getElementById("course").className+= " anotherClass";
 			    <tr>
 			        <td id="po" ><a href="po.php">PO - Calculation</a></td>
 			    </tr>
+			    <tr>
+			        <td id="prev-acfg" ><a href="prev_acfg.php">Previous Course files</a></td>
+			    </tr>
 			  	</tbody>
 			</table>			
 		</div>		<!--Left Side bar sm-3 -->

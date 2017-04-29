@@ -158,7 +158,7 @@ $file_pages = array();
 			array_push($stack, "$coursepath");
 			array_push($file_names, "Course Plan");
 
-			array_push($file_pages, $coursenum);
+			//array_push($file_pages, $coursenum);
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='evalplan'";
@@ -172,7 +172,7 @@ $file_pages = array();
 			$course_evalplan_page_numbers=count_pages($course_evalplan);
 			array_push($stack, "$course_evalplan");
 			array_push($file_names, "Evaluation Plan");
-			array_push($file_pages, "$course_evalplan_page_numbers");
+			//array_push($file_pages, "$course_evalplan_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='t1_quespaper'";
@@ -186,7 +186,7 @@ $file_pages = array();
 			$t1_quespaper_page_numbers=count_pages($t1_quespaper);
 			array_push($stack, "$t1_quespaper");
 			array_push($file_names, "First Mid-term Question Paper");
-			array_push($file_pages, "$t1_quespaper_page_numbers");
+			//array_push($file_pages, "$t1_quespaper_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='t1_keysheet'";
@@ -200,7 +200,7 @@ $file_pages = array();
 			$t1_keysheet_page_numbers=count_pages($t1_keysheet);
 			array_push($stack, "$t1_keysheet");
 			array_push($file_names, "First Mid-term Key");
-			array_push($file_pages, "$t1_keysheet_page_numbers");
+			//array_push($file_pages, "$t1_keysheet_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='t1_markssheet'";
@@ -214,7 +214,7 @@ $file_pages = array();
 			$t1_markssheet_page_numbers=count_pages($t1_markssheet);
 			array_push($stack, "$t1_markssheet");
 			array_push($file_names, "First Mid-term Marks Sheet");
-			array_push($file_pages, "$t1_markssheet_page_numbers");
+			//array_push($file_pages, "$t1_markssheet_page_numbers");
 
 		}
 		}
@@ -229,7 +229,7 @@ $file_pages = array();
 			$t2_quespaper_page_numbers=count_pages($t2_quespaper);
 			array_push($stack, "$t2_quespaper");
 			array_push($file_names, "Second Mid-term Question Paper");
-			array_push($file_pages, "$t2_quespaper_page_numbers");
+			//array_push($file_pages, "$t2_quespaper_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='t2_keysheet'";
@@ -243,7 +243,7 @@ $file_pages = array();
 			$t2_keysheet_page_numbers=count_pages($t2_keysheet);
 			array_push($stack, "$t2_keysheet");
 			array_push($file_names, "Second Mid-term Key");
-			array_push($file_pages, "$t2_keysheet_page_numbers");
+			//array_push($file_pages, "$t2_keysheet_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='t2_markssheet'";
@@ -257,7 +257,7 @@ $file_pages = array();
 			$t2_markssheet_page_numbers=count_pages($t2_markssheet);
 			array_push($stack, "$t2_markssheet");
 			array_push($file_names, "Second Mid-term Marks Sheet");
-			array_push($file_pages, "$t2_markssheet_page_numbers");
+			//array_push($file_pages, "$t2_markssheet_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='assgn'";
@@ -271,7 +271,7 @@ $file_pages = array();
 			$assgn_page_numbers=count_pages($assgn);
 			array_push($stack, "$assgn");
 			array_push($file_names, "Assignments");
-			array_push($file_pages, "$assgn_page_numbers");
+			//array_push($file_pages, "$assgn_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='assg_key'";
@@ -285,7 +285,7 @@ $file_pages = array();
 			$assg_key_page_numbers=count_pages($assg_key);
 			array_push($stack, "$assg_key");
 			array_push($file_names, "Assignments Key");
-			array_push($file_pages, "$assg_key_page_numbers");
+			//array_push($file_pages, "$assg_key_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='assgn_proj_marks'";
@@ -299,7 +299,7 @@ $file_pages = array();
 			$assgn_proj_marks_page_numbers=count_pages($assgn_proj_marks);
 			array_push($stack, "$assgn_proj_marks");
 			array_push($file_names, "Assignments Marks Sheet");
-			array_push($file_pages, "$assgn_proj_marks_page_numbers");
+			//array_push($file_pages, "$assgn_proj_marks_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='attendance'";
@@ -314,7 +314,7 @@ $file_pages = array();
 			array_push($stack, "$attendance");
 			array_push($file_names, "Attendance");
 			
-			array_push($file_pages, "$attendance_page_numbers");
+			//array_push($file_pages, "$attendance_page_numbers");
 		}
 		}
 
@@ -329,7 +329,7 @@ $file_pages = array();
 			$t3_quespaper_page_numbers=count_pages($t3_quespaper);
 			array_push($stack, "$t3_quespaper");
 			array_push($file_names, "End-Semester Question Paper");
-			array_push($file_pages, "$t3_quespaper_page_numbers");
+			//array_push($file_pages, "$t3_quespaper_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='t3_keysheet'";
@@ -343,7 +343,7 @@ $file_pages = array();
 			$t3_keysheet_page_numbers=count_pages($t3_keysheet);
 			array_push($stack, "$t3_keysheet");
 			array_push($file_names, "End-Semester Key");
-			array_push($file_pages, "$t3_keysheet_page_numbers");
+			//array_push($file_pages, "$t3_keysheet_page_numbers");
 		}
 		}
 		$sql="SELECT * from DOCUMENTS where faculty_id='$user' and course_id='$course_id' and doc_type='t3_markssheet'";
@@ -357,14 +357,19 @@ $file_pages = array();
 			$t3_markssheet_page_numbers=count_pages($t3_markssheet);
 			array_push($stack, "$t3_markssheet");
 			array_push($file_names, "End-Semester Marks");
-			array_push($file_pages, "$t3_markssheet_page_numbers");
+			//array_push($file_pages, "$t3_markssheet_page_numbers");
 		}
 		}
-
+array_push($file_pages, 2);
+array_push($file_pages, 2);
+array_push($file_pages, 2);
+array_push($file_pages, 2);
+array_push($file_pages, 2);
+array_push($file_pages, 4);
 $fileArray= $stack;
-/*print_r($fileArray);
+print_r($fileArray);
 print_r($file_names);
-print_r($file_pages);*/
+print_r($file_pages);
 
 
 $pdf= new FPDF(); 

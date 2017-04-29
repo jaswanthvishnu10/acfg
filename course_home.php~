@@ -96,11 +96,14 @@ document.getElementById("course").className+= " anotherClass";
 			    <tr>
 			        <td id="po" ><a href="po.php">PO - Calculation</a></td>
 			    </tr>
+			    <tr>
+			        <td id="prev-acfg" ><a href="prev_acfg.php">Previous Course files</a></td>
+			    </tr>
 			  	</tbody>
 			</table>			
 		  </div>		<!--Left Side bar sm-3 -->
 <script>
-document.getElementById("courses-list-button").className+= " anotherClass";
+document.getElementById("courses-list-button").className+= " anotherClass1";
 </script>
 
 		  <div class="col-sm-9"  id="right-bar">
@@ -119,21 +122,17 @@ document.getElementById("courses-list-button").className+= " anotherClass";
 			<table style="margin-top:10px;padding:10px;">
 				<tr><th class="col-xs-3">Previous Course Files</th><th class="col-xs-5">Description</th><th class="col-xs-1"></th></tr>
 				<?php	
-$sql="SELECT * FROM DOCUMENTS WHERE course_id='$course_id' and doc_type='ACFG'";
+$sql="SELECT * FROM DOCUMENTS WHERE course_id='$course_id' and doc_type='course'";
 $result = mysqli_query($conn,$sql);
 if(mysqli_num_rows($result) > 0)
 {
 	while($row = mysqli_fetch_assoc($result))
 	{ 
-		if($row[semester] == 1)
-		{
-			$sem = 'Monsoon';
-		}
-		else
-		{
-			$sem = 'Winter';
-		}
-		echo "<tr><form action='pdfviewer.php' method='post'><td>".$row[doc_name]."</td><td>".$row[year]." ".$sem."</td><td><input type='submit' value ='Open Doc'><input type='hidden' name='doc_path' value='".$row[doc_path]."'></td></tr></form>";
+		echo "<tr><form action='pdfviewer.php' method='post'><td>".$row[doc_name]."</td><td>".$row[description]."</td><td><input type='submit' value ='Open Doc'><input type='hidden' name='doc_path' value='".$row[doc_path]."'></td></form>";
+if ($row[faculty_id] == $user){ 
+?>
+<form method='post' enctype='multipart/form-data' onsubmit="return confirm('Are you sure you want to delete the document?');">
+<?php echo "<td><input type='submit' value ='Remove Doc'><input type='hidden' name='doc_qpaper_remove' value='".$row[doc_path]."'></td></tr></form>";}
 	}
 }
 else
@@ -188,6 +187,31 @@ else
 				echo mysqli_error();
 			}
 			}
+			if(isset($_POST['doc_qpaper_remove'])){
+		header("Refresh:0"); //check_here1
+		$target_file = $_POST["doc_qpaper_remove"];
+		$deleteOk=1;	
+		// Check if file already exists
+		if (!file_exists($target_file)) {
+		    echo "Sorry, file already removed.<br>";
+		    $deleteOk = 0;
+		}
+		if ($deleteOk == 0) {
+		    echo "Sorry, your file was not removed.<br>";
+		// if everything is ok, try to upload file
+		} else {
+			unlink($target_file);
+			echo "file deleted from directory";
+		}
+
+		$qry="DELETE FROM DOCUMENTS WHERE doc_path = '$target_file'";
+		if($deleteOk!= 0 && mysqli_query($conn,$qry) ){
+			echo "DB delete_update successful<br>";
+		}
+		else{
+			echo "DB delete_update failed<br>";
+		}
+		} //removing file ended
 			?>
 			</div>  <!-- courses-list -->
 			

@@ -63,6 +63,9 @@ document.getElementById("course").className+= " anotherClass";
 			    <tr>
 			        <td id="po" ><a href="po.php">PO - Calculation</a></td>
 			    </tr>
+			    <tr>
+			        <td id="prev-acfg" ><a href="prev_acfg.php">Previous Course files</a></td>
+			    </tr>
 			  	</tbody>
 			</table>			
 		</div>		<!--Left Side bar sm-3 -->
@@ -128,6 +131,8 @@ $result = mysqli_query($conn,$sql);
 if($row= mysqli_fetch_assoc($result))
 {
 	echo "<br><br><strong><center>CO aggregate attained: $row[ans]</center></strong>";
+	$fin = $row[ans]/3*100;
+	echo "<br><center><strong>Percentage/Weighted CO Attained = $fin</strong></center>";
 	$sql2 = "UPDATE COURSE_PO set co_avg = $row[ans] where course_id = '$course_id'";
 	mysqli_query($conn,$sql2);
 }
